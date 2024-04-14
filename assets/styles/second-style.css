@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     padding: 0px;
     margin: 0px;
+}
+
+:root {
+    --cor-01: #081B29;
+    --cor-02: #112E42;
+    --cor-03: #EDEDED;
+    --cor-04: #00ABF0;
 }
 
 html {
@@ -12,15 +19,15 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: var(--cor-01);
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    background-color: var(--cor-01);
 }
 
 body h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
-    color: #20C3D0;
+    color: var(--cor-03);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.850);
     margin-bottom: 20px;
 }
@@ -43,40 +50,30 @@ main {
 
 .sites-mobile p {
     text-align: justify;
+    color: var(--cor-03);
+    margin: 10px 0px;
 }
 
 .sites-mobile a {
     text-align: center;
     text-decoration: none;
-    color: #20C3D0;
+    color: var(--cor-03);
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.cor-cv {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
+.sites-mobile a:hover {
+    color: var(--cor-04);
+    transition: 0.2s;
 }
 
-.cor-lp {
-    color: #6A4E36;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
-    margin-top: 160px;
+.config-titulo {
+    color: var(--cor-04);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);    
 }
 
-.cor-wtc {
-    color: #FFC322;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
-    margin-top: 160px;
-}
-
-.cor-acai {
-    color: #3A004F;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
-    margin-top: 160px;
-}
-
-.cor-hbg {
-    color: #FAAB0F;
+.config-titulo1 {
+    color: var(--cor-04);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
     margin-top: 160px;
 }
@@ -84,7 +81,6 @@ main {
 .botao-voltar img {
     width: 50px;
     height: 50px;
-    margin-top: 160px;
 }
 
 .sites {
