@@ -29,6 +29,14 @@ body h1 {
     text-align: center;
     color: var(--cor-03);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.850);
+}
+
+span {
+    display: block;
+    text-align: center;
+    color: var(--cor-04);
+    background-color: var(--cor-02);
+    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -51,20 +59,35 @@ main {
 .sites-mobile p {
     text-align: justify;
     color: var(--cor-03);
-    margin: 10px 0px;
 }
 
 .sites-mobile a {
     text-align: center;
     text-decoration: none;
-    color: var(--cor-03);
+    color: var(--cor-04);
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.sites-mobile a:hover {
-    color: var(--cor-04);
-    transition: 0.2s;
+.sites {
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 10px;
+    height: 100%;
+    padding: 20px;
+}
+
+.sites iframe {
+    background-color: black;
+    width: 320px;
+    height: 568px;
+    border: 1px solid black;
+}
+
+.borda {
+    border-bottom: 1px solid white;
+    width: 100%;
 }
 
 .config-titulo {
@@ -83,21 +106,6 @@ main {
     height: 50px;
 }
 
-.sites {
-    display: none;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    gap: 10px;
-    height: 100%;
-}
-
-.sites iframe {
-    background-color: black;
-    width: 290px;
-    height: 500px;
-    border: 1px solid black;
-}
-
 footer {
     background-color: black;
     color: white;
@@ -109,4 +117,75 @@ footer strong:hover {
     color: #20C3D0;
     transition: 0.2s;
     cursor: default;
+}
+
+@media only screen and (min-width: 568px) {
+    span {
+        display: none;
+    }
+    
+    .sites-mobile {
+        display: none;
+    }
+
+    .sites {
+        display: grid;
+        border-top: 1px solid white;
+    }
+
+    .sites h2 {
+        margin-top: 20px;
+        color: var(--cor-03);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
+        font-size: 2em;
+    }
+
+    .sites p {
+        color: var(--cor-03);
+        text-align: justify;
+        margin: 10px 0px;
+        background-color: var(--cor-02);
+        padding: 10px;
+    }
+
+    .sites a {
+        text-decoration: none;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.600);
+        font-weight: bold;
+        font-size: 1.5em;
+        color: var(--cor-04);
+    }
+
+    .sites a:hover {
+        color: var(--cor-04);
+        transition: 0.2s;
+    }
+
+    .botao-voltar {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sites iframe {
+        width: 600px;
+    }    
+}
+
+@media only screen and (min-width: 992px) {
+    .sites iframe {
+        width: 800px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .sites iframe {
+        width: 1000px;
+    }
+
+    .sites p {
+        text-align: center;
+        font-size: 1.5em;
+    }
 }
