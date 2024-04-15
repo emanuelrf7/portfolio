@@ -34,7 +34,7 @@ body {
 
 .cabecalho p {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--cor-03);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.850);
 }
@@ -51,7 +51,7 @@ menu ul {
 }
 
 menu li {
-    font-size: 1.5em;
+    font-size: 1em;
     position: relative;
 }
 
@@ -75,6 +75,7 @@ menu li:hover::after {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.250) inset;
 }
 
@@ -85,7 +86,7 @@ menu li:hover::after {
     align-items: center;
     height: 100vh;
     color: white;
-    background-color: rgba(0, 0, 0, 0.450);
+    background-color: rgba(0, 0, 0, 0.400);
 }
 
 .fundo-transparente h1 {
@@ -242,6 +243,15 @@ menu li:hover::after {
     margin-bottom: 20px;
 }
 
+.container-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contato a {
+    margin-top: 15px;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -253,4 +263,95 @@ footer strong:hover {
     color: var(--cor-04);
     transition: 0.2s;
     cursor: default;
+}
+
+@media only screen and (min-width: 568px) {
+    .cabecalho {
+        height: 100%;
+    }
+
+    #apresentacao {
+        background-image: url("../img/background-deitado.jpg");       
+    }
+
+    .container-contato {
+        flex-direction: row;
+    }
+
+    .container-contato a {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cabecalho p {
+        margin-left: 20px;
+    }
+
+    .container-menu-items {
+        display: flex;
+    }
+
+    .container-menu-items a {
+        margin-right: 20px;
+    }
+
+    #apresentacao {
+        background-image: url("/assets/img/background-medio.jpg");
+    }
+
+    #sobre h2 {
+        margin-bottom: 20px;
+    }
+    
+    #sobre p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #trabalhos {
+        height: 500px;
+    }
+
+    #contato {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container-foto-de-perfil {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #apresentacao {
+        background-image: url("/assets/img/background-grande.jpg");        
+    }
+    
+    .fundo-transparente {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .fundo-transparente h1, h2 {
+        margin-left: 25px;
+    }
+
+    #sobre {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-height: 600px) {
+    #apresentacao {
+        background-image: url("/assets/img/background-medio.jpg");        
+    }
 }
