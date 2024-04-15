@@ -271,7 +271,7 @@ footer strong:hover {
     }
 
     #apresentacao {
-        background-image: url("../img/background-deitado.jpg");       
+        background-image: url("../img/background-grande.jpg");       
     }
 
     .container-contato {
@@ -300,10 +300,6 @@ footer strong:hover {
 
     .container-menu-items a {
         margin-right: 20px;
-    }
-
-    #apresentacao {
-        background-image: url("/assets/img/background-grande.jpg");
     }
 
     #sobre h2 {
