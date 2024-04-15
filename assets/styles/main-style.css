@@ -333,7 +333,7 @@ footer strong:hover {
 
 @media only screen and (min-width: 1200px) {
     #apresentacao {
-        background-image: url("/assets/img/background-medio.jpg");        
+        background-image: url("/assets/img/background-grande.jpg");        
     }
     
     .fundo-transparente {
